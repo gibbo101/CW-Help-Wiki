@@ -19,3 +19,12 @@ class SubjectAdmin(SummernoteModelAdmin):
     list_filter = ('category',)
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content')
+
+
+@admin.register(Comment)
+class CommentAdmin(SummernoteModelAdmin):
+
+    list_display = ('subject', 'author', 'created_date', 'content')
+    list_filter = ('subject', 'created_date')
+    search_fields = ['content']
+    summernote_fields = ('content')
