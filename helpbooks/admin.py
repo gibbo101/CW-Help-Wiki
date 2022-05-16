@@ -21,7 +21,7 @@ class SubjectAdmin(SummernoteModelAdmin):
     summernote_fields = ('content')
 
 
-@admin.register(Comment)
+@admin.register(Comments)
 class CommentAdmin(SummernoteModelAdmin):
 
     list_display = ('subject', 'author', 'created_date', 'content')
