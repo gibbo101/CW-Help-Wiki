@@ -1,2 +1,3 @@
 from django.contrib import admin
-from .models import Category, Subject, Comment
+from .models import Category, Subject, Comments
+
