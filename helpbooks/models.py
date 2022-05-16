@@ -27,7 +27,7 @@ class Subject(models.Model):
     created_date = models.DateTimeField(auto_now_add=True)
     updated_date = models.DateTimeField(auto_now_add=True)
     banner_image = CloudinaryField('image', default='placeholder')
-    likes = models.ManytoManyField(User, related_name='subject__likes', blank=True)
+    likes = models.ManyToManyField(User, related_name='subject__likes', blank=True)
 
     class Meta:
         ordering = ['id']
