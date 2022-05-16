@@ -1,1 +1,1 @@
-web: gunicorn CwWiki.wsgi
+web: gunicorn cwwiki.wsgi
