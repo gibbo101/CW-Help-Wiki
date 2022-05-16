@@ -9,3 +9,13 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title', 'slug')
     search_fields = ['title']
     prepopulated_fields = {'slug': ('title',)}
+
+
+@admin.register(Subject)
+class SubjectAdmin(SummernoteModelAdmin):
+
+    list_display = ('title', 'slug', 'category', 'created_date', 'author')
+    search_fields = ['title']
+    list_filter = ('category',)
+    prepopulated_fields = {'slug': ('title',)}
+    summernote_fields = ('content')
