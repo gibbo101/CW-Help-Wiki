@@ -30,9 +30,18 @@
     </header>
 
     <aside>
-        <ul id="slide-out" class="sidenav sidenav-fixed">
-            <li><a href="#!">First Sidebar Link</a></li>
-            <li><a href="#!">Second Sidebar Link</a></li>
+        <ul id="slide-out" class="sidenav sidenav-fixed collapsible">
+            {% for category in category_list %}
+            {{ category.title }}
+            {% endfor %}
+            {% for subject in subject_list %}
+            <li>
+                <div class="collapsible-header">{{ subject.title }}</div>
+
+            </li>
+            {% endfor %}
+
+
         </ul>
     </aside>
     <main>
