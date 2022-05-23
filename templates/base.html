@@ -31,13 +31,9 @@
 
     <aside>
         <ul id="slide-out" class="sidenav sidenav-fixed collapsible">
-            {% for category in category_list %}
-            {{ category.title }}
-            {% endfor %}
             {% for subject in subject_list %}
             <li>
-                <div class="collapsible-header">{{ subject.title }}</div>
-
+                {{ subject.title }}
             </li>
             {% endfor %}
 
